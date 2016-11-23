@@ -10,15 +10,12 @@ public class GameTest {
 
     private static final int ROUNDS = 9;
     Game game;
-    Thread t1, t2;
     ExecutorService executorService;
 
     @Before
     public void setUp() throws Exception {
         game = new Game();
         executorService = Executors.newFixedThreadPool(2);
-        t1 = new Thread(game, "Thread 1");
-        t2 = new Thread(game, "Thread 2");
     }
 
     @Test
